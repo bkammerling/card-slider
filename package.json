@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.16.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
   }
 }
