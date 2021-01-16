@@ -41,7 +41,8 @@ a:hover {
 
 .carousel {
   max-width: 100%;
-  overflow: hidden;  
+  overflow: hidden; 
+  margin: 20px 0; 
 }
 
 .carousel-inner {
@@ -88,7 +89,7 @@ a:hover {
   padding: 19px;
 }
 
-.card-image {
+.card-image img {
   width: 100%;
 }
 

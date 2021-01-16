@@ -69,8 +69,10 @@ function moveCarousel(e) {
   const carouselInner = carousel.childNodes[0];
   const card = carouselInner.firstElementChild;
   
-  let transformAmount = card.offsetWidth + 26; // to compensate for margins  
+  // calculate amount to move the carousel to see 1 extra card
+  let transformAmount = card.offsetWidth + 26; // 26 to compensate for margins  
 
+  // check how far we've transformed in order to not move too far and disable buttons at right time
   if(e.currentTarget.dataset.direction == 'left') {
     e.currentTarget.nextElementSibling.classList.remove('disabled');
     if(Math.abs(transformX(carouselInner)) - transformAmount <= 0) {
@@ -83,16 +85,20 @@ function moveCarousel(e) {
     };
   }
   
+  // if we're going forward/right, we want a negative X transformation
   if(e.currentTarget.dataset.direction == 'right') transformAmount=transformAmount*-1;
   carouselInner.style.transform = `translateX(${transformX(carouselInner) + transformAmount}px)`;
   
 }
 
 function transformX(element) {
+  // get the amount an element has been transformed on the X-axis
   const style = window.getComputedStyle(element);
   const matrix = new WebKitCSSMatrix(style.transform);
   return matrix.m41;
 }
+
+expect(transformX(document.body)).to.be.a('number');
 
 function carousel(containerId) {
   // get carousel container where we want to append our card slides
