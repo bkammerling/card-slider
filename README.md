@@ -1,6 +1,9 @@
 # Card Carousel & Dummy Card API
 A card slider component built with vanilla JS. Displaying *dummy* data from a simple JSON server.
 
+![Preview of cards in a carousel slider](public/images/card-screenshot.png "Card Carousel Preview")
+
+
 ## Usage
 Simply run
 
