@@ -47,13 +47,12 @@ a:hover {
 
 .carousel-inner {
   display: flex;
-  /*transition: transform 1s; */
+  transition: transform 0.1s; 
   width: fit-content;
 }
 
 .carousel-nav {
   display: flex;
-  justify-content: space-between;
   width: 40px;
   margin: 0 auto;
   color: #2da936;
@@ -62,7 +61,14 @@ a:hover {
 .carousel-navicon {
   width: 15px;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s;  
+  padding: 8px;
+}
+.carousel-navicon:first-child {
+  padding-left: 0;
+}
+.carousel-navicon:last-child {
+  padding-right: 0;
 }
 .carousel-navicon:not(.disabled):hover {
   opacity: 0.7;

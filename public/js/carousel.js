@@ -97,7 +97,6 @@ function transformX(element) {
   const matrix = new WebKitCSSMatrix(style.transform);
   return matrix.m41;
 }
-
 expect(transformX(document.body)).to.be.a('number');
 
 function carousel(containerId) {
